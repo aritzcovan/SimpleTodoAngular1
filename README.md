@@ -15,11 +15,11 @@ This is not meant to be a reference implementation.
 ##why was it created?
 
 The site was created in order to show the differences between building a simple todo list using Angular 1 and Angular 2.
-[You can see the Angular 2 version of the site here] and [get the code for both sites on Github.com](http://github.com/aritzcovan/simpleTodoAng1)
+[You can see the Angular 2 version of the site here] and [get the code for both sites on Github.com](http://github.com/aritzcovan)
 
 ##Special thanks
-I would like to thank [John Papa](http://www.johnpapa.me). I incorporated the logging block that he outlines in his ng-demos/modular project.
+I would like to thank [John Papa](http://www.johnpapa.net). I incorporated the logging block that he outlines in his ng-demos/modular project.
 [You can check out all of that very useful code here](https://github.com/johnpapa/ng-demos/tree/master/modular) Thanks John!!
 
 Im happy to answer any questions of field any comments. 
-[contact me here](http://www.ritzcovan.com)
+[contact me here](http://www.ritzcovan.com/contact)
