@@ -1,11 +1,9 @@
 using System;
 using System.Linq;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace oldAng.Models
+namespace SimpTodo1.Models
 {
 
     public class TodoRepository : ITodoRepository

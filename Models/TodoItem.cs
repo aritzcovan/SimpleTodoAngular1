@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace oldAng.Models
+namespace SimpTodo1.Models
 {
     [Table("Todos")]
     public class TodoItem

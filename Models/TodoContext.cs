@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace oldAng.Models
+namespace SimpTodo1.Models
 {
     public class TodoContext : DbContext
     {

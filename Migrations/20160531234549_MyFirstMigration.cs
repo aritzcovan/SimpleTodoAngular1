@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace oldAng.Migrations
+namespace SimpTodo1.Migrations
 {
     public partial class MyFirstMigration : Migration
     {

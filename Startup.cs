@@ -4,9 +4,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
-using oldAng.Models;
+using SimpTodo1.Models;
 
-namespace oldAng
+namespace SimpTodo1
 {
     public class Startup
     {

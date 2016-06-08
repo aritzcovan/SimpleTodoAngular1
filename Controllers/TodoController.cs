@@ -1,11 +1,10 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using oldAng.Models;
+using SimpTodo1.Models;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace oldAng.Controllers
+namespace SimpTodo1.Controllers
 {
     [Route("api/[controller]")]
     public class TodoController : Controller
@@ -37,7 +36,7 @@ namespace oldAng.Controllers
         }
         
 
-        // GET api/values/5
+        // GET api/todo/5
         [HttpGet("{id}")]
         public IActionResult Get(string id)
         {

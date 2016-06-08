@@ -1,11 +1,9 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using oldAng.Models;
+using SimpTodo1.Models;
 
-namespace oldAng.Migrations
+namespace SimpTodo1.Migrations
 {
     [DbContext(typeof(TodoContext))]
     [Migration("20160531234549_MyFirstMigration")]
@@ -16,7 +14,7 @@ namespace oldAng.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rc2-20896");
 
-            modelBuilder.Entity("oldAng.Models.TodoItem", b =>
+            modelBuilder.Entity("SimpTodo1.Models.TodoItem", b =>
                 {
                     b.Property<int>("TodoId")
                         .ValueGeneratedOnAdd();

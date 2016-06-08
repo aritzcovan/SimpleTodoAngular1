@@ -78,6 +78,6 @@
   },
 
   "tooling": {
-    "defaultNamespace": "oldAng"
+    "defaultNamespace": "SimpTodo1"
   }
 }

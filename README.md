@@ -23,5 +23,3 @@ I would like to thank [John Papa](http://www.johnpapa.me). I incorporated the lo
 
 Im happy to answer any questions of field any comments. 
 [contact me here](http://www.ritzcovan.com)
-
-thx and enjoy
