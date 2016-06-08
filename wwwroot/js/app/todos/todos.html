@@ -1,6 +1,6 @@
 
 
-<div class="panel panel-primary">
+<div class="panel panel-default">
     <div class="panel-heading" ng-click="vm.headerClick()">Home todos</div>
 
     <table class="table table-striped table-hover" ng-hide="vm.collapsed">
@@ -35,9 +35,9 @@
             </tr>
             <tr>
                 <td colspan="4">
-                    <div ng-show="vm.showNew()">
-                        <button class="btn btn-default" ng-click="vm.createTodo()"><span class="glyphicon glyphicon-plus"></span></button>
-                    </div>
+                    <button class="btn btn-default" ng-click="vm.createTodo()">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </button>                        
                 </td>
             </tr>
         </tbody>

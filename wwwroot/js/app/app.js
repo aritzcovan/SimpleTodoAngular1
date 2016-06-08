@@ -19,7 +19,7 @@
                             controller: 'TodoController',
                             controllerAs: 'vm'
                         })
-                    .state('todo.edit',
+                    .state('edittodo',
                         {
                             url: '/edittodo/:todoId',
                             templateUrl: '../js/app/todos/edittodo.html',

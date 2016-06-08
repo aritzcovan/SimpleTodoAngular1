@@ -13,7 +13,9 @@
         this.createTodo = createTodo;
         this.updateTodo = updateTodo;
         this.deleteTodo = deleteTodo;
-        this.markComplete = markComplete;
+        this.getTodoById = getTodoById;
+        //this.markComplete = markComplete;
+        
 
         ////////////////
 
@@ -47,12 +49,19 @@
             });
         }
         
-        function markComplete(todoId){
+        function getTodoById(todoId) {
             return $http({
-                method: 'POST',
-                url: this.apiPath,
-                data: {id: todoId}
+                method: 'GET',
+                url: this.apiPath + '/' + todoId
             });
         }
+        
+        // function markComplete(todoId){
+        //     return $http({
+        //         method: 'POST',
+        //         url: this.apiPath,
+        //         data: {id: todoId}
+        //     });
+        // }
     }
 })();
