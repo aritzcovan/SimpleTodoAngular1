@@ -5,9 +5,9 @@
         .module('app')
         .controller('TodoController', TodoController);
 
-    TodoController.$inject = ['$scope', 'TodoService'];
+    TodoController.$inject = ['$scope', 'TodoService', 'logger'];
 
-    function TodoController($scope, _todoService) {
+    function TodoController($scope, _todoService, _logger) {
         var vm = this;
         vm.todos = [];
         vm.creating = false;
@@ -25,6 +25,8 @@
         vm.cancel = cancel;
         vm.headerClick = headerClick;
         vm.collapsed = false;
+        vm.saveIsActive = saveIsActive;
+
 
         //make a call to get the data we need for the page to be displayed correctly
         activate();
@@ -72,13 +74,15 @@
         }
 
         function deleteTodo(todo) {
-            _todoService.deleteTodo(todo)
-                .then(function (response) {
-                    var index = vm.todos.indexOf(todo);
-                    vm.todos.splice(index, 1);
-                }, function (error) {
-                    console.log('error deleting ' + error);
-                })
+            if (confirm('r u sure?')) {
+                _todoService.deleteTodo(todo)
+                    .then(function (response) {
+                        var index = vm.todos.indexOf(todo);
+                        vm.todos.splice(index, 1);
+                    }, function (error) {
+                        console.log('error deleting ' + error);
+                    })
+            }
         }
 
         function markComplete(todo) {
@@ -96,15 +100,19 @@
             }
             return true;
         }
-        
+
         function cancel() {
             vm.editing = false;
             vm.creating = false;
             vm.selectedTodo = undefined;
         }
-        
+
         function headerClick() {
             vm.collapsed = !vm.collapsed;
+        }
+
+        function saveIsActive() {
+            return vm.newTodo === undefined;
         }
     }
 

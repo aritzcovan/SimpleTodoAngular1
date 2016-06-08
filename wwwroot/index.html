@@ -4,103 +4,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Angular 1 - Todo List</title>
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/toastr/toastr.min.css">
     <link rel="stylesheet" href="css/site.css">
 </head>
 
-<body ng-controller="TodoController as vm">
+<body>
     
     <div class="container">
-        <div class="panel panel-primary">
-            <div class="panel-heading" ng-click="vm.headerClick()">Home todos</div>
-            
-            <table class="table table-striped table-hover" ng-hide="vm.collapsed">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Complete</th>
-                        <th>&nbsp;</th>
-                        <th>&nbsp;</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="todo in vm.todos">
-                        <td>
-                            {{todo.name}}
-                        </td>
-                        <td>
-                            {{todo.isComplete}}
-                        </td>
-                        <td>
-                            <button class="btn btn-default" ng-click="vm.editTodo(todo)">
-                                <span class="glyphicon glyphicon-pencil "></span>
-                            </button>
-                        </td>
-                        <td>
-                            <button class="btn btn-default" ng-click="vm.deleteTodo(todo)">
-                                <span class="glyphicon glyphicon-trash "></span>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="4">
-                            <div ng-show="vm.showNew() ">
-                                <button class="btn btn-default " ng-click="vm.createTodo() "><span class="glyphicon glyphicon-plus "></span></button>
-                            </div>                
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            
-        </div>
-
-        
-
-
-
-        <div ng-show="vm.creating">
-            <form>
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" class="form-control" name="name" ng-model="vm.newTodo.name">
-                </div>
-                <div class="form-group ">
-                    <label for="isComplete">is complete:</label>
-                    <input type="checkbox" name="isComplete" ng-model="vm.newTodo.isComplete">
-                </div>
-                <button class="btn btn-default" ng-click="vm.saveTodo()">save</button>
-                <button class="btn btn-default" ng-click="vm.cancel()">cancel</button>
-            </form>
-        </div>
         
         
-
-        <div ng-show="vm.editing">
-            <form>
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" class="form-control" name="name" ng-model="vm.selectedTodo.name">
-                </div>
-                <div class="form-group">
-                    <label for="isComplete">is complete:</label>
-                    <input type="checkbox" name="isComplete" ng-model="vm.selectedTodo.isComplete">
-                </div>
-
-                <button class="btn btn-default" ng-click="vm.updateTodo()">update</button>
-                <button class="btn btn-default" ng-click="vm.cancel()">cancel</button>
-            </form>
-        </div>
+       <div ui-view></div>
+       
+       
     </div>
+    
+    
             <script src="lib/jquery/dist/jquery.min.js"></script>
             <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
             <script src="lib/angular/angular.min.js"></script>
             <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+            <script src="lib/toastr/toastr.js"></script>
+            
+            
+            <script src="js/app/blocks/logger/logger.module.js"></script>
+            <script src="js/app/blocks/logger/logger.js"></script>
+            <script src="js/app/core/core.module.js"></script>
+            <script src="js/app/core/constants.js"></script>
+            <script src="js/app/core/config.js"></script>
+            
             <script src=js/app/app.js></script>
             <script src=js/app/Todos/Todo.service.js></script>
             <script src=js/app/home/HomeController.js></script>
             <script src=js/app/todos/TodoController.js></script>
-          
-
-
+            
 </body>
 
 </html>

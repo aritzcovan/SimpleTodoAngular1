@@ -1,0 +1,16 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">Edit Todo</div>
+    <form>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" name="name" ng-model="vm.selectedTodo.name">
+        </div>
+        <div class="form-group">
+            <label for="isComplete">is complete:</label>
+            <input type="checkbox" name="isComplete" ng-model="vm.selectedTodo.isComplete">
+        </div>
+
+        <button class="btn btn-default" ng-click="vm.updateTodo()">update</button>
+        <button class="btn btn-default" ng-click="vm.cancel()">cancel</button>
+    </form>
+</div>
