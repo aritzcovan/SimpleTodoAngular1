@@ -18,6 +18,13 @@
                             templateUrl: '../js/app/todos/todos.html',
                             controller: 'TodoController',
                             controllerAs: 'vm'
+                        })
+                    .state('todo.edit',
+                        {
+                            url: '/edittodo/:todoId',
+                            templateUrl: '../js/app/todos/edittodo.html',
+                            controller: 'TodoController',
+                            controllerAs: 'vm'
                         });
                         
                     $urlRouterProvider.otherwise('home');

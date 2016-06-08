@@ -5,9 +5,9 @@
         .module('app')
         .controller('TodoController', TodoController);
 
-    TodoController.$inject = ['$scope', 'TodoService', 'logger'];
+    TodoController.$inject = ['$scope', '$state', 'TodoService', 'logger'];
 
-    function TodoController($scope, _todoService, _logger) {
+    function TodoController($scope, $state, _todoService, _logger) {
         var vm = this;
         vm.todos = [];
         vm.creating = false;
@@ -58,8 +58,9 @@
         }
 
         function editTodo(todo) {
-            vm.selectedTodo = angular.copy(todo);
-            vm.editing = true;
+            //vm.selectedTodo = angular.copy(todo);
+            //vm.editing = true;
+            $state.go('todo.edit/' + todo.todoId);
         }
 
         function updateTodo() {

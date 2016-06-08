@@ -31,6 +31,11 @@ textarea {
 }
 
 .panel {
+    margin-top: 30px;
     width: 50%;
+}
+
+.navi li i {
+    margin-right: 5px;
 }
 

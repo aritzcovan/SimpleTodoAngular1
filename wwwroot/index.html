@@ -10,11 +10,22 @@
 
 <body>
     
-    <div class="container">
-        
-        
-       <div ui-view></div>
+    <div data-ng-include="'header.html'"></div>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <ul class="navi list-unstyled">
+                    <li>&nbsp;</li>
+                    <li><a ui-sref="home">home</a></li>
+                    <li><a ui-sref="todo">todos</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-md-10" ui-view></div>
+        </div>
        
+    
        
     </div>
     
