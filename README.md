@@ -1,39 +1,27 @@
-# Welcome to ASP.NET Core
+# Welcome to the Simple Todo List in Angular 1
 
-We've made some big updates in this release, so it’s **important** that you spend a few minutes to learn what’s new.
+## What is this?
 
-You've created a new ASP.NET Core project. [Learn what's new](https://go.microsoft.com/fwlink/?LinkId=518016)
+This site is an example of how to create a simple todo list using [Angular 1](http://www.angularjs.org) and [ASP.NET Core](http://dotnet.github.io)
+I wanted to show basic CRUD functionality as well a simple routing and then compare and contrast this implementation to an [Angular2](http://www.angular.io) solution.
+This site makes use of the [ui-router library](https://github.com/angular-ui/ui-router), [toastr](https://github.com/CodeSeven/toastr) and [bootstrap](http://www.getbootstrap.com) but you can see that on the index.html page.
+    
+I used Sqlite for the DB and Entity Framework for DB Connectivity.
+I also employed the repository pattern for the DB connection code and registered the Interface for the repository in Startup.cs.
 
-## This application consists of:
+Please note that this is just a simple implementation and there are many ways to do this (as is the case with all software).
+This is not meant to be a reference implementation.
 
-*   Sample pages using ASP.NET Core MVC
-*   [Gulp](https://go.microsoft.com/fwlink/?LinkId=518007) and [Bower](https://go.microsoft.com/fwlink/?LinkId=518004) for managing client-side libraries
-*   Theming using [Bootstrap](https://go.microsoft.com/fwlink/?LinkID=398939)
+##why was it created?
 
-## How to
+The site was created in order to show the differences between building a simple todo list using Angular 1 and Angular 2.
+[You can see the Angular 2 version of the site here] and [get the code for both sites on Github.com](http://github.com/aritzcovan/simpleTodoAng1)
 
-*   [Add a Controller and View](https://go.microsoft.com/fwlink/?LinkID=398600)
-*   [Add an appsetting in config and access it in app.](https://go.microsoft.com/fwlink/?LinkID=699562)
-*   [Manage User Secrets using Secret Manager.](https://go.microsoft.com/fwlink/?LinkId=699315)
-*   [Use logging to log a message.](https://go.microsoft.com/fwlink/?LinkId=699316)
-*   [Add packages using NuGet.](https://go.microsoft.com/fwlink/?LinkId=699317)
-*   [Add client packages using Bower.](https://go.microsoft.com/fwlink/?LinkId=699318)
-*   [Target development, staging or production environment.](https://go.microsoft.com/fwlink/?LinkId=699319)
+##Special thanks
+I would like to thank [John Papa](http://www.johnpapa.me). I incorporated the logging block that he outlines in his ng-demos/modular project.
+[You can check out all of that very useful code here](https://github.com/johnpapa/ng-demos/tree/master/modular) Thanks John!!
 
-## Overview
+Im happy to answer any questions of field any comments. 
+[contact me here](http://www.ritzcovan.com)
 
-*   [Conceptual overview of what is ASP.NET Core](https://go.microsoft.com/fwlink/?LinkId=518008)
-*   [Fundamentals of ASP.NET Core such as Startup and middleware.](https://go.microsoft.com/fwlink/?LinkId=699320)
-*   [Working with Data](https://go.microsoft.com/fwlink/?LinkId=398602)
-*   [Security](https://go.microsoft.com/fwlink/?LinkId=398603)
-*   [Client side development](https://go.microsoft.com/fwlink/?LinkID=699321)
-*   [Develop on different platforms](https://go.microsoft.com/fwlink/?LinkID=699322)
-*   [Read more on the documentation site](https://go.microsoft.com/fwlink/?LinkID=699323)
-
-## Run & Deploy
-
-*   [Run your app](https://go.microsoft.com/fwlink/?LinkID=517851)
-*   [Run tools such as EF migrations and more](https://go.microsoft.com/fwlink/?LinkID=517853)
-*   [Publish to Microsoft Azure Web Apps](https://go.microsoft.com/fwlink/?LinkID=398609)
-
-We would love to hear your [feedback](https://go.microsoft.com/fwlink/?LinkId=518015)
+thx and enjoy
